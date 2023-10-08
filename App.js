@@ -1,7 +1,7 @@
 import { StyleSheet, Text, View } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-import GenerateMealOptions from './screens/GenerateMealOptions';
+import MealForm from './Screens/GenerateMealOptions';
 
 
 export default function App() {
@@ -13,7 +13,7 @@ export default function App() {
       <Stack.Navigator initialRouteName = "Form">
         <Stack.Screen 
           name="Form" 
-          component={GenerateMealOptions}
+          component={MealForm}
           options={{
             headerShown: false, // Set headerShown to false for this screen
           }} />
