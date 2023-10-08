@@ -2,7 +2,7 @@ import { StyleSheet, Text, View, TextInput, TouchableOpacity } from 'react-nativ
 import React, { useState } from 'react';
 import DropDownPicker from 'react-native-dropdown-picker';
 
-export default function MealForm ({bgColor}) {
+export default function MealForm ({navigation}) {
 
     const [calL, setcalL] = useState(null);
     const [calH, setcalH] = useState(null);
@@ -105,29 +105,29 @@ export default function MealForm ({bgColor}) {
         };
         if (calL !== null && calH !== null){
             data["total_calories"]={
-                low: calL,
-                high: calH
+                low: parseInt(calL),
+                high: parseInt(calH)
             }
         };
         if (fatL !== null && fatH !== null){
             data["total_fat"]={
-                low: fatL,
-                high: fatH
+                low: parseInt(fatL),
+                high: parseInt(fatH)
             }
         };
         if (carbsL !== null && carbsH !== null){
             data["total_carbs"]={
-                low: carbsL,
-                high: carbsH
+                low: parseInt(carbsL),
+                high: parseInt(carbsH)
             }
         };
         if (proteinL !== null && proteinH !== null){
             data["protein"]={
-                low: proteinL,
-                high: proteinH
+                low: parseInt(proteinL),
+                high: parseInt(proteinH)
             }
         };
-        console.log(data);
+        return data
     }
 
     const checkFields = (valueD, valueM, calL, calH, proteinL, proteinH, fatL, fatH, carbsL, carbsH, isCheckedE, isCheckedS, isCheckedD) => {
@@ -155,8 +155,32 @@ export default function MealForm ({bgColor}) {
             }
         }
         
-        createJSON(valueD, valueM, calL, calH, proteinL, proteinH, fatL, fatH, carbsL, carbsH, isCheckedE, isCheckedS, isCheckedD);
-    }   
+        return createJSON(
+            valueD, valueM, calL, calH, proteinL, proteinH, fatL,
+            fatH, carbsL, carbsH, isCheckedE, isCheckedS, isCheckedD
+            );
+    }
+    
+    const buttonOnPress = () => {
+        setErrorCheckEnabled(true)
+        let payload = checkFields(
+            valueD, valueM, calL, calH, proteinL, proteinH, fatL,
+            fatH, carbsL, carbsH, isCheckedE, isCheckedS, isCheckedD
+            )
+        fetch('http://192.168.1.158:8000/meals', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(payload)
+        }).then(response => response.json())
+            .then(json => {
+                console.log(JSON.stringify(json))
+                navigation.navigate('MealDisplay', {mealList: json})
+             }).catch(error => {
+                console.error(error)
+            })
+    }
 
     return (
         <View style={styles.container}>
@@ -320,7 +344,7 @@ export default function MealForm ({bgColor}) {
             <View style={styles.buttonContainer}>
                 <TouchableOpacity 
                     style={styles.button}
-                    onPress={() => {setErrorCheckEnabled(true); checkFields(valueD, valueM, calL, calH, proteinL, proteinH, fatL, fatH, carbsL, carbsH, isCheckedE, isCheckedS, isCheckedD);}}>
+                    onPress={buttonOnPress}>
                     <Text style={styles.buttonText}>Generate Meal</Text>
                 </TouchableOpacity>
             </View>
@@ -367,7 +391,6 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         margin: 10,
         zIndex: 1000,
-        //backgroundColor: 'white',
     },
     locationDropDown: {
         borderColor: '#D9D9D9',
@@ -379,7 +402,6 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         margin: 10,
         zIndex: 100,
-        //backgroundColor: 'white',
     },
     dropDownContainer: {
         alignSelf: 'flex-end',
@@ -390,8 +412,6 @@ const styles = StyleSheet.create({
         justifyContent: 'space-between',
         alignItems: 'center',
         margin: 10,
-        //backgroundColor: 'white',
-        //width: '51%',
     },
     rangeContainer: {
         flexDirection: 'row',
@@ -403,7 +423,6 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         justifyContent: 'space-evenly',
         alignItems: 'center',
-        //backgroundColor: 'blue',
         marginLeft: 10,
     },
     checkBox: {
