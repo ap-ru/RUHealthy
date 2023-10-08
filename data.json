@@ -1,0 +1,182 @@
+[
+    {
+        "total": {
+            "total_calories": 530.0,
+            "total_fat": 17.5,
+            "sodium": 500.0,
+            "total_carbs": 35.0,
+            "sugar": 21.0,
+            "protein": 30.0,
+            "cholesterol": 100.0,
+            "fiber": 5.0
+        },
+        "entree": {
+            "name": "Grilled Chicken Breast",
+            "total_calories": 150.0,
+            "total_fat": 2.0,
+            "sodium": 300.0,
+            "total_carbs": 0.0,
+            "sugar": 0.0,
+            "protein": 25.0,
+            "cholesterol": 75.0,
+            "fiber": 0.0
+        },
+        "side": {
+            "name": "Steamed Broccoli",
+            "total_calories": 30.0,
+            "total_fat": 0.5,
+            "sodium": 20.0,
+            "total_carbs": 5.0,
+            "sugar": 1.0,
+            "protein": 2.0,
+            "cholesterol": 0.0,
+            "fiber": 3.0
+        },
+        "dessert": {
+            "name": "Chocolate Cake",
+            "total_calories": 350.0,
+            "total_fat": 15.0,
+            "sodium": 180.0,
+            "total_carbs": 30.0,
+            "sugar": 20.0,
+            "protein": 3.0,
+            "cholesterol": 25.0,
+            "fiber": 2.0
+        }
+    },
+    {
+        "total": {
+            "total_calories": 480.0,
+            "total_fat": 14.5,
+            "sodium": 520.0,
+            "total_carbs": 45.0,
+            "sugar": 19.0,
+            "protein": 29.0,
+            "cholesterol": 85.0,
+            "fiber": 6.0
+        },
+        "entree": {
+            "name": "Grilled Chicken Breast",
+            "total_calories": 150.0,
+            "total_fat": 2.0,
+            "sodium": 300.0,
+            "total_carbs": 0.0,
+            "sugar": 0.0,
+            "protein": 25.0,
+            "cholesterol": 75.0,
+            "fiber": 0.0
+        },
+        "side": {
+            "name": "Steamed Broccoli",
+            "total_calories": 30.0,
+            "total_fat": 0.5,
+            "sodium": 20.0,
+            "total_carbs": 5.0,
+            "sugar": 1.0,
+            "protein": 2.0,
+            "cholesterol": 0.0,
+            "fiber": 3.0
+        },
+        "dessert": {
+            "name": "Apple Pie",
+            "total_calories": 300.0,
+            "total_fat": 12.0,
+            "sodium": 200.0,
+            "total_carbs": 40.0,
+            "sugar": 18.0,
+            "protein": 2.0,
+            "cholesterol": 10.0,
+            "fiber": 3.0
+        }
+    },
+    {
+        "total": {
+            "total_calories": 550.0,
+            "total_fat": 18.0,
+            "sodium": 580.0,
+            "total_carbs": 36.0,
+            "sugar": 22.0,
+            "protein": 31.0,
+            "cholesterol": 100.0,
+            "fiber": 4.0
+        },
+        "entree": {
+            "name": "Grilled Chicken Breast",
+            "total_calories": 150.0,
+            "total_fat": 2.0,
+            "sodium": 300.0,
+            "total_carbs": 0.0,
+            "sugar": 0.0,
+            "protein": 25.0,
+            "cholesterol": 75.0,
+            "fiber": 0.0
+        },
+        "side": {
+            "name": "Grilled Asparagus",
+            "total_calories": 50.0,
+            "total_fat": 1.0,
+            "sodium": 100.0,
+            "total_carbs": 6.0,
+            "sugar": 2.0,
+            "protein": 3.0,
+            "cholesterol": 0.0,
+            "fiber": 2.0
+        },
+        "dessert": {
+            "name": "Chocolate Cake",
+            "total_calories": 350.0,
+            "total_fat": 15.0,
+            "sodium": 180.0,
+            "total_carbs": 30.0,
+            "sugar": 20.0,
+            "protein": 3.0,
+            "cholesterol": 25.0,
+            "fiber": 2.0
+        }
+    },
+    {
+        "total": {
+            "total_calories": 500.0,
+            "total_fat": 15.0,
+            "sodium": 600.0,
+            "total_carbs": 46.0,
+            "sugar": 20.0,
+            "protein": 30.0,
+            "cholesterol": 85.0,
+            "fiber": 5.0
+        },
+        "entree": {
+            "name": "Grilled Chicken Breast",
+            "total_calories": 150.0,
+            "total_fat": 2.0,
+            "sodium": 300.0,
+            "total_carbs": 0.0,
+            "sugar": 0.0,
+            "protein": 25.0,
+            "cholesterol": 75.0,
+            "fiber": 0.0
+        },
+        "side": {
+            "name": "Grilled Asparagus",
+            "total_calories": 50.0,
+            "total_fat": 1.0,
+            "sodium": 100.0,
+            "total_carbs": 6.0,
+            "sugar": 2.0,
+            "protein": 3.0,
+            "cholesterol": 0.0,
+            "fiber": 2.0
+        },
+        "dessert": {
+            "name": "Apple Pie",
+            "total_calories": 300.0,
+            "total_fat": 12.0,
+            "sodium": 200.0,
+            "total_carbs": 40.0,
+            "sugar": 18.0,
+            "protein": 2.0,
+            "cholesterol": 10.0,
+            "fiber": 3.0
+        }
+    }
+]

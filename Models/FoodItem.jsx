@@ -1,4 +1,4 @@
-class FoodItem {
+export class FoodItem {
     constructor (name, calories, carbs, fat, protein, sugar, sodium, cholesterol, fiber) {
         this.name = name
         this.calories = calories
@@ -10,6 +10,4 @@ class FoodItem {
         this.cholesterol = cholesterol
         this.fiber = fiber
     }
-
-
 }
